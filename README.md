@@ -1,3 +1,5 @@
+(<https://raw.githubusercontent.com/neailabs/neailabs.github.io/main/Wizlight-GUI.png">)
+
 # WizLight GUI Controller
 
 A modern graphical user interface for controlling Wiz smart lights, built with PySide6 and Python. This GUI provides an intuitive interface for all the functionality available in the wizlightcpp command-line tool (<https://github.com/yachoukh/wizlightcpp>)
