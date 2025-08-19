@@ -13,7 +13,7 @@ from pathlib import Path
 def create_app_bundle():
     """Create a macOS .app bundle"""
     
-    app_name = "WizLight Controller"
+    app_name = "WizLight GUI"
     bundle_name = f"{app_name}.app"
     
     # Create bundle structure
@@ -44,9 +44,9 @@ def create_app_bundle():
     <key>CFBundleName</key>
     <string>{app_name}</string>
     <key>CFBundleVersion</key>
-    <string>1.0.0</string>
+    <string>1.1.0</string>
     <key>CFBundleShortVersionString</key>
-    <string>1.0.0</string>
+    <string>1.1.0</string>
     <key>CFBundleInfoDictionaryVersion</key>
     <string>6.0</string>
     <key>CFBundlePackageType</key>

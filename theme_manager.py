@@ -20,7 +20,23 @@ class ThemeManager(QObject):
         super().__init__()
         self.app = app or QApplication.instance()
         self.current_theme = None
-        self.stylesheet_dir = Path(__file__).parent / "resources"   # Adjust path as needed
+        
+        # Get the base path for bundled resources
+        if getattr(sys, 'frozen', False) and hasattr(sys, '_MEIPASS'):
+            # Running from a PyInstaller bundle
+            base_path = sys._MEIPASS
+        else:
+            # Running in a normal Python environment
+            base_path = os.path.dirname(os.path.abspath(__file__))
+
+        # Construct the correct path to the stylesheet
+        stylesheet_path = os.path.join(base_path, 'resources')
+        if not os.path.exists(stylesheet_path):
+            raise FileNotFoundError(f"Stylesheet directory does not exist: {stylesheet_path}")
+        else:
+            self.stylesheet_dir = Path(stylesheet_path)
+
+        # self.stylesheet_dir = Path(__file__).parent / "resources"   # Adjust path as needed
         
         # Timer for periodic theme checking
         self.theme_check_timer = QTimer()

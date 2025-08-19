@@ -7,6 +7,7 @@ import subprocess
 import json
 import re
 import os
+import sys
 import socket
 import ipaddress
 from typing import Dict, List, Optional, Tuple
@@ -28,6 +29,18 @@ class WizLightWrapper:
         Args:
             executable_path: Path to wizlightcpp executable. If None, looks in the ../build/ directory.
         """
+        try:
+            # This is the path when running from a PyInstaller bundle
+            base_path = sys._MEIPASS
+        except Exception:
+            # This is the path when running in a normal Python environment
+            base_path = os.path.abspath(".")
+
+        wizlightcpp_path = os.path.join(base_path, 'wizlightcpp')
+        
+        if os.path.exists(wizlightcpp_path):
+            executable_path = wizlightcpp_path
+
         if executable_path is None:
             # Look for the executable in the build directory
             current_dir = Path(__file__).parent
