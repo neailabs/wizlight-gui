@@ -38,9 +38,9 @@ def create_app_bundle():
 <plist version="1.0">
 <dict>
     <key>CFBundleExecutable</key>
-    <string>WizLight Controller</string>
+    <string>WizLight GUI</string>
     <key>CFBundleIdentifier</key>
-    <string>com.wizlight.controller</string>
+    <string>com.wizlight.gui</string>
     <key>CFBundleName</key>
     <string>{app_name}</string>
     <key>CFBundleVersion</key>
@@ -72,7 +72,7 @@ cd "$DIR/../Resources"
 python3 main.py
 """
     
-    launcher_path = macos_path / "WizLight Controller"
+    launcher_path = macos_path / "WizLight GUI"
     with open(launcher_path, "w") as f:
         f.write(launcher_script)
     
@@ -138,7 +138,7 @@ def check_wizlightcpp():
 
 def main():
     """Main build function"""
-    print("🔨 Building WizLight Controller for macOS...")
+    print("🔨 Building WizLight GUI Controller for macOS...")
     print()
     
     # Check prerequisites
