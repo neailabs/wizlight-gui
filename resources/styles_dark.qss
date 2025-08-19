@@ -1,0 +1,473 @@
+/* Modern Dark Theme stylesheet for WizLight GUI */
+
+/* Main window styling with dark glassmorphism effect */
+QMainWindow {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:1,
+        stop:0 #0f172a, stop:1 #1e293b);
+    color: #f8fafc;
+}
+
+/* Group box with modern dark card design */
+QGroupBox {
+    font-weight: 600;
+    font-size: 14px;
+    border: 1px solid rgba(71, 85, 105, 0.8);
+    border-radius: 12px;
+    margin-top: 12px;
+    padding-top: 16px;
+    padding-left: 4px;
+    padding-right: 4px;
+    padding-bottom: 8px;
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+        stop:0 rgba(51, 65, 85, 0.95),
+        stop:1 rgba(30, 41, 59, 0.85));
+}
+
+QGroupBox::title {
+    subcontrol-origin: margin;
+    left: 16px;
+    padding: 4px 12px;
+    color: #cbd5e1;
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+        stop:0 rgba(59, 130, 246, 0.2),
+        stop:1 rgba(99, 102, 241, 0.2));
+    border-radius: 6px;
+}
+
+/* Modern button design for dark theme */
+QPushButton {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+        stop:0 #3b82f6, stop:1 #2563eb);
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 13px;
+    min-height: 20px;
+    min-width: 80px;
+}
+
+QPushButton:hover {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+        stop:0 #2563eb, stop:1 #1d4ed8);
+}
+
+QPushButton:pressed {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+        stop:0 #1d4ed8, stop:1 #1e40af);
+}
+
+QPushButton:disabled {
+    background: #4b5563;
+    color: #9ca3af;
+}
+
+/* Secondary button variant for dark theme */
+QPushButton[class="secondary"] {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+        stop:0 #6366f1, stop:1 #4f46e5);
+}
+
+QPushButton[class="secondary"]:hover {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+        stop:0 #4f46e5, stop:1 #4338ca);
+}
+
+/* Accent button variant for dark theme */
+QPushButton[class="accent"] {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+        stop:0 #06b6d4, stop:1 #0891b2);
+}
+
+QPushButton[class="accent"]:hover {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+        stop:0 #0891b2, stop:1 #0e7490);
+}
+
+/* Modern slider for dark theme */
+QSlider::groove:horizontal {
+    border: none;
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+        stop:0 #374151, stop:1 #4b5563);
+    height: 6px;
+    border-radius: 3px;
+}
+
+QSlider::sub-page:horizontal {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+        stop:0 #3b82f6, stop:1 #06b6d4);
+    border-radius: 3px;
+}
+
+QSlider::add-page:horizontal {
+    background: #4b5563;
+    border-radius: 3px;
+}
+
+QSlider::handle:horizontal {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+        stop:0 #f8fafc, stop:1 #e2e8f0);
+    border: 2px solid #3b82f6;
+    width: 20px;
+    height: 20px;
+    margin: -8px 0;
+    border-radius: 10px;
+}
+
+QSlider::handle:horizontal:hover {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+        stop:0 #dbeafe, stop:1 #bfdbfe);
+    border-color: #2563eb;
+}
+
+/* Input fields for dark theme */
+QSpinBox, QLineEdit {
+    padding: 8px 12px;
+    border: 2px solid #475569;
+    border-radius: 8px;
+    background: rgba(51, 65, 85, 0.9);
+    color: #f8fafc;
+    font-size: 13px;
+}
+
+QSpinBox:focus, QLineEdit:focus {
+    border-color: #3b82f6;
+    background: rgba(51, 65, 85, 1);
+    outline: none;
+}
+
+QSpinBox:hover, QLineEdit:hover {
+    border-color: #64748b;
+}
+
+/* List widget for dark theme */
+QListWidget {
+    border: 1px solid #475569;
+    border-radius: 12px;
+    background: rgba(51, 65, 85, 0.95);
+    alternate-background-color: rgba(30, 41, 59, 0.5);
+    padding: 4px;
+}
+
+QListWidget::item {
+    padding: 12px 16px;
+    border-radius: 8px;
+    margin: 2px;
+    border: none;
+    color: #f8fafc;
+}
+
+QListWidget::item:selected {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:1,
+        stop:0 rgba(59, 130, 246, 0.25),
+        stop:1 rgba(99, 102, 241, 0.2));
+    color: #f8fafc;
+    border: 1px solid rgba(59, 130, 246, 0.4);
+}
+
+QListWidget::item:hover {
+    background: rgba(71, 85, 105, 0.8);
+}
+
+/* Text edit for dark theme */
+QTextEdit {
+    border: 2px solid #475569;
+    border-radius: 12px;
+    background: rgba(51, 65, 85, 0.95);
+    padding: 12px;
+    color: #f8fafc;
+    font-family: "Helvetica Neue", "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", sans-serif;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+QTextEdit:focus {
+    border-color: #3b82f6;
+    background: rgba(51, 65, 85, 1);
+}
+
+/* Tab styling for dark theme */
+QTabWidget::pane {
+    border: 1px solid #475569;
+    border-radius: 12px;
+    background: rgba(51, 65, 85, 0.95);
+    margin-top: -1px;
+}
+
+QTabBar::tab {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+        stop:0 rgba(30, 41, 59, 0.9),
+        stop:1 rgba(15, 23, 42, 0.8));
+    border: 1px solid #475569;
+    padding: 10px 20px;
+    margin-right: 2px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    color: #94a3b8;
+    font-weight: 500;
+}
+
+QTabBar::tab:selected {
+    background: rgba(51, 65, 85, 1);
+    border-bottom-color: rgba(51, 65, 85, 1);
+    color: #f8fafc;
+    font-weight: 600;
+}
+
+QTabBar::tab:hover:!selected {
+    background: rgba(71, 85, 105, 0.8);
+    color: #cbd5e1;
+}
+
+/* Progress bar for dark theme */
+QProgressBar {
+    border: 1px solid #475569;
+    border-radius: 8px;
+    text-align: center;
+    background: #1e293b;
+    color: #cbd5e1;
+    font-weight: 600;
+}
+
+QProgressBar::chunk {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+        stop:0 #3b82f6, stop:1 #06b6d4);
+    border-radius: 6px;
+    margin: 1px;
+}
+
+/* Status bar for dark theme */
+QStatusBar {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+        stop:0 rgba(30, 41, 59, 0.9),
+        stop:1 rgba(15, 23, 42, 0.8));
+    border-top: 1px solid #475569;
+    color: #94a3b8;
+    font-size: 12px;
+    padding: 4px;
+}
+
+/* Dark scrollbars */
+QScrollBar:vertical {
+    background: rgba(30, 41, 59, 0.5);
+    width: 8px;
+    border-radius: 4px;
+    margin: 0;
+}
+
+QScrollBar::handle:vertical {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+        stop:0 #64748b, stop:1 #475569);
+    border-radius: 4px;
+    min-height: 20px;
+    margin: 2px;
+}
+
+QScrollBar::handle:vertical:hover {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+        stop:0 #94a3b8, stop:1 #64748b);
+}
+
+QScrollBar::add-line:vertical,
+QScrollBar::sub-line:vertical {
+    height: 0;
+}
+
+QScrollBar:horizontal {
+    background: rgba(30, 41, 59, 0.5);
+    height: 8px;
+    border-radius: 4px;
+    margin: 0;
+}
+
+QScrollBar::handle:horizontal {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+        stop:0 #64748b, stop:1 #475569);
+    border-radius: 4px;
+    min-width: 20px;
+    margin: 2px;
+}
+
+QScrollBar::handle:horizontal:hover {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+        stop:0 #94a3b8, stop:1 #64748b);
+}
+
+QScrollBar::add-line:horizontal,
+QScrollBar::sub-line:horizontal {
+    width: 0;
+}
+
+/* Splitter handle for dark theme */
+QSplitter::handle {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:1,
+        stop:0 #475569, stop:1 #374151);
+}
+
+QSplitter::handle:horizontal {
+    width: 2px;
+}
+
+QSplitter::handle:vertical {
+    height: 2px;
+}
+
+QSplitter::handle:hover {
+    background: #3b82f6;
+}
+
+/* Tooltip styling for dark theme */
+QToolTip {
+    background: rgba(15, 23, 42, 0.95);
+    color: #cbd5e1;
+    border: 1px solid #475569;
+    border-radius: 6px;
+    padding: 6px 10px;
+    font-size: 12px;
+}
+
+/* Context menu for dark theme */
+QMenu {
+    background: rgba(51, 65, 85, 0.95);
+    border: 1px solid #475569;
+    border-radius: 8px;
+    padding: 4px;
+}
+
+QMenu::item {
+    padding: 8px 16px;
+    border-radius: 4px;
+    margin: 1px;
+    color: #f8fafc;
+}
+
+QMenu::item:selected {
+    background: rgba(59, 130, 246, 0.2);
+    color: #f8fafc;
+}
+
+/* Scroll area styling for dark theme */
+QScrollArea {
+    border: none;
+    background-color: transparent;
+}
+
+/* Combo box styling for dark theme */
+QComboBox {
+    padding: 8px 12px;
+    border: 2px solid #475569;
+    border-radius: 8px;
+    background: rgba(51, 65, 85, 0.9);
+    color: #f8fafc;
+    font-size: 13px;
+    min-width: 100px;
+}
+
+QComboBox:hover {
+    border-color: #64748b;
+}
+
+QComboBox:focus {
+    border-color: #3b82f6;
+    background: rgba(51, 65, 85, 1);
+}
+
+QComboBox::drop-down {
+    border: none;
+    width: 20px;
+}
+
+QComboBox::down-arrow {
+    image: none;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #94a3b8;
+    margin-right: 5px;
+}
+
+QComboBox QAbstractItemView {
+    background: rgba(51, 65, 85, 0.95);
+    border: 1px solid #475569;
+    border-radius: 8px;
+    color: #f8fafc;
+    selection-background-color: rgba(59, 130, 246, 0.2);
+}
+
+/* Check box styling for dark theme */
+QCheckBox {
+    color: #f8fafc;
+    font-size: 13px;
+    spacing: 8px;
+}
+
+QCheckBox::indicator {
+    width: 16px;
+    height: 16px;
+    border: 2px solid #475569;
+    border-radius: 4px;
+    background: rgba(51, 65, 85, 0.9);
+}
+
+QCheckBox::indicator:hover {
+    border-color: #64748b;
+}
+
+QCheckBox::indicator:checked {
+    background: #3b82f6;
+    border-color: #3b82f6;
+}
+
+QCheckBox::indicator:checked:hover {
+    background: #2563eb;
+    border-color: #2563eb;
+}
+
+/* Radio button styling for dark theme */
+QRadioButton {
+    color: #f8fafc;
+    font-size: 13px;
+    spacing: 8px;
+}
+
+QRadioButton::indicator {
+    width: 16px;
+    height: 16px;
+    border: 2px solid #475569;
+    border-radius: 8px;
+    background: rgba(51, 65, 85, 0.9);
+}
+
+QRadioButton::indicator:hover {
+    border-color: #64748b;
+}
+
+QRadioButton::indicator:checked {
+    background: #3b82f6;
+    border-color: #3b82f6;
+}
+
+QRadioButton::indicator:checked:hover {
+    background: #2563eb;
+    border-color: #2563eb;
+}
+
+/* Add this to your styles_dark.qss */
+QStatusBar {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+        stop:0 rgba(30, 41, 59, 0.9),
+        stop:1 rgba(15, 23, 42, 0.8));
+    border-top: 1px solid #475569;
+    color: #94a3b8;
+    font-size: 12px;
+    padding: 4px 8px;
+}
+
+QStatusBar QLabel {
+    background: transparent;
+    color: #94a3b8;
+}
+
+QStatusBar QLabel[class="credits"] {
+    color: #64748b;
+}
